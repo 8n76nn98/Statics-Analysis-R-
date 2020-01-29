@@ -1,3 +1,4 @@
+library(tidyverse)
 #Read in the csv file Lab1.csv using code, not the Import button
 dat <- read.csv('/Users/mingshi/Desktop/firstYear2Secemeter/statics_analysis/assignment1/Lab1.csv',header = TRUE)
 #Display summary statistics for the variable EARN
@@ -17,7 +18,7 @@ earn<-dat$EARN
 job<-dat$Job.class
 boxplot(earn~job)
 # Create a new variable EARNx10000 that is equal to Earnings divided by 10,000
-EARNx10000<-dat$EDUC/1000
+EARNx10000<-dat$EARN/1000
 age<-dat$AGE
 # Create a scatterplot with EARNx10000 on the x axis and AGE on the Y axis
 sc<-ggplot(dat,aes(x=EARNx10000,y=age)) + geom_point(shape=19) +
